@@ -3,16 +3,19 @@
 
 Inpired by `remote.inc.php`, this authentication module uses http headers to authenticate and define proper userlevel.
 
+This is meant to be used with `oauth2-proxy` but not limited to. By default, username is expected in `X-Preferred-Username` header and group list in `X-Groups`. Level zero takes precedence over any other levels.
+See top of `header.inc.php` for futher configuration details.
+
 ## Installation
 
-### Obervium
+### Observium
 
 * Copy `observium/html/includes/authentication/header.inc.php` in your Observium's `html/includes/authentication/` folder
 * Edit your `config.php` to change auth mecanism
     ```php
     $config['auth_mechanism'] = "header";
     ```
-* Still in `config.php`, define your role/userlevel mapping
+* Still in `config.php`, define your role/userlevel mapping (user level reference: https://docs.observium.org/user_levels/)
    ```php
     $config['auth_header_role_mapping'] = array(
       "role-0" => 0,

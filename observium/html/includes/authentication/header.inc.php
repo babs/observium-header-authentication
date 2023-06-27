@@ -6,7 +6,7 @@
  * Inspired by remote.inc.php
  *
  * You must configure your http server beforhand.
- * Make sure headers are nor forwarded without being filtered first!
+ * Make sure headers are not forwarded without being filtered first!
  *
  * Configuration variables:
  *
@@ -23,7 +23,7 @@
  *   "role-10" => 10,
  * );
  *   - Mapping between roles and userlevel. https://docs.observium.org/user_levels/
- *     Highest takes precedence excepted if a level zero is in the roles then the account is disabled.
+ *     Highest takes precedence except if a level zero is in the roles then the account is disabled.
  *
  * $config['auth_header_user'] = 'HTTP_X_PREFERRED_USERNAME';
  *   - Header providing the username (HTTP_ prefixed, uppercase, - replaced by _)
